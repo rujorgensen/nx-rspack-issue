@@ -1,10 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -37,17 +34,7 @@
       "options": {
         "targetName": "test"
       },
-      "exclude": [
-        "apps/my-workspace-e2e/**/*"
-      ]
-    },
-    {
-      "plugin": "@nx/rspack/plugin",
-      "options": {
-        "buildTargetName": "build",
-        "serveTargetName": "serve",
-        "previewTargetName": "preview"
-      }
+      "exclude": ["apps/my-workspace-e2e/**/*", "apps/my-workspace-2-e2e/**/*"]
     }
   ]
 }
